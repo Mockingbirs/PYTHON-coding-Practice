@@ -1,0 +1,84 @@
+/*
+자료형
+
+문자열 자료형
+1. 큰따옴표로 양쪽 둘러싸기 "Hello World"
+2. 작은따옴표로 양쪽 둘러싸기 'Python is fun'
+3. 큰따옴표 3개를 연속으로 써서 양쪽 둘러싸기 """Life is too short, You need python"""
+4. 작은따옴표 3개를 연속으로 써서 양쪽 둘러싸기 '''Life is too short, You need python'''
+
+문자열 포매팅
+"I eat %d apples." % 3
+'I eat 3 apples.'
+
+코드	설명
+%s	문자열(String)
+%c	문자 1개(character)
+%d	정수(Integer)
+%f	부동소수(floating-point)
+%o	8진수
+%x	16진수
+%%	Literal % (문자 % 자체)
+
+문자열 바로 대입하기
+>>> "I eat {0} apples".format("five")
+'I eat five apples'
+
+숫자 값을 가진 변수로 대입하기
+>>> number = 3
+>>> "I eat {0} apples".format(number)
+'I eat 3 apples'
+
+2개 이상의 값 넣기
+>>> number = 10
+>>> day = "three"
+>>> "I ate {0} apples. so I was sick for {1} days.".format(number, day)
+'I ate 10 apples. so I was sick for three days.'
+
+이름으로 넣기
+>>> "I ate {number} apples. so I was sick for {day} days.".format(number=10, day=3)
+'I ate 10 apples. so I was sick for 3 days.'
+
+인덱스와 이름을 혼용해서 넣기
+>>> "I ate {0} apples. so I was sick for {day} days.".format(10, day=3)
+'I ate 10 apples. so I was sick for 3 days.'
+
+왼쪽 정렬
+>>> "{0:<10}".format("hi")
+'hi        '
+:<10 표현식을 사용하면 치환되는 문자열을 왼쪽으로 정렬하고 문자열의 총 자릿수를 10으로 맞출 수 있다.
+
+오른쪽 정렬
+>>> "{0:>10}".format("hi")
+'        hi'
+오른쪽 정렬은 :< 대신 :>을 사용하면 된다. 화살표의 방향을 생각하면 어느 쪽으로 정렬되는지 바로 알 수 있다.
+
+가운데 정렬
+>>> "{0:^10}".format("hi")
+'    hi    '
+:^를 사용하면 가운데 정렬도 가능하다.
+
+공백 채우기
+>>> "{0:=^10}".format("hi")
+'====hi===='
+>>> "{0:!<10}".format("hi")
+'hi!!!!!!!!'
+
+소수점 표현하기
+>>> y = 3.42134234
+>>> "{0:0.4f}".format(y)
+'3.4213'
+
+{ 또는 } 문자 표현하기
+>>> "{{ and }}".format()
+'{ and }'
+format 함수를 사용해 문자열을 포매팅할 경우, {}와 같은 중괄호 문자를 포매팅 문자가 아닌 문자 그대로 사용하고 싶은 경우에는 위 예의 {{}}처럼 2개를 연속해서 사용하면 된다.
+
+f 문자열 포매팅
+파이썬 3.6 버전부터는 f 문자열 포매팅 기능을 사용할 수 있다. 파이썬 3.6 미만 버전에서는 사용할 수 없는 기능이므로 주의해야 한다.
+다음과 같이 문자열 앞에 f 접두사를 붙이면 f 문자열 포매팅 기능을 사용할 수 있다.
+>>> name = '홍길동'
+>>> age = 30
+>>> f'나의 이름은 {name}입니다. 나이는 {age}입니다.'
+'나의 이름은 홍길동입니다. 나이는 30입니다.'
+*/
